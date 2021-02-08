@@ -59,8 +59,10 @@ def verify_ages(groups: List[List[int]]) -> List[bool]:
     for i in range(len(groups)):
         if len(groups[i]) > 10 or len(groups[i]) <= 3:
             liste_finale[i] = False
+            continue
         for i2 in range(len(groups[i])):
             if groups[i][i2] == 25:
+                liste_finale[i] = True
                 break
             elif groups[i][i2] < 18:
                 liste_finale[i] = False
@@ -69,10 +71,6 @@ def verify_ages(groups: List[List[int]]) -> List[bool]:
                     if groups[i][i3] == 50:
                         liste_finale[i] = False
     return liste_finale
-
-
-
-    return []
 
 
 def main() -> None:
