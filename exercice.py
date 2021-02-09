@@ -23,7 +23,7 @@ def prime_integer_summation() -> int:
     somme = 2
     nombre = 3
     while nb_premiers < 100:
-        for i in range(2, nombre):
+        for i in range(2, int(nombre**0.5 + 1)):
             if nombre % i == 0:
                 nombre += 1
                 break
