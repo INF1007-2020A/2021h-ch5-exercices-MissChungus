@@ -40,9 +40,6 @@ def factorial(number: int) -> int:
         while number > 1:
             factorielle *= number
             number -= 1
-    else:
-        factorielle = 1
-
     return factorielle
 
 
